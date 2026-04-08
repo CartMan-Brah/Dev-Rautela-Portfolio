@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dev Rautela | GTM Systems Architect</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Inter', 'sans-serif'] },
+                    animation: {
+                        'gradient-x': 'gradient-x 15s ease infinite',
+                        'float': 'float 6s ease-in-out infinite',
+                    },
+                    keyframes: {
+                        'gradient-x': {
+                            '0%, 100%': {
+                                'background-size': '200% 200%',
+                                'background-position': 'left center'
+                            },
+                            '50%': {
+                                'background-size': '200% 200%',
+                                'background-position': 'right center'
+                            },
+                        },
+                        'float': {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-10px)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #0f172a; }
+        ::-webkit-scrollbar-thumb { background: #334155; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #10b981; }
+        
+        .glass-panel {
+            background: rgba(30, 41, 59, 0.7);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+    </style>
+</head>
+<body class="bg-slate-950 text-slate-300 font-sans antialiased selection:bg-emerald-500/30 selection:text-emerald-200">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-40 glass-panel border-b-0 border-slate-800/50 transition-all duration-300" id="navbar">
+        <div class="max-w-6xl mx-auto px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <a href="#" class="text-xl font-extrabold text-white tracking-tighter flex items-center gap-2">
+                    <div class="w-8 h-8 rounded bg-gradient-to-br from-emerald-400 to-emerald-600 flex items-center justify-center text-slate-900">
+                        <i data-lucide="layers" class="w-5 h-5"></i>
+                    </div>
+                    DEV.RAUTELA
+                </a>
+                <div class="hidden md:flex space-x-8 text-sm font-medium">
+                    <a href="#about" class="hover:text-emerald-400 transition-colors">Philosophy</a>
+                    <a href="#frameworks" class="hover:text-emerald-400 transition-colors">Frameworks</a>
+                    <a href="#experience" class="hover:text-emerald-400 transition-colors">Experience</a>
+                    <button onclick="toggleChat()" class="text-emerald-400 hover:text-emerald-300 flex items-center gap-1.5 transition-colors">
+                        <i data-lucide="sparkles" class="w-4 h-4"></i> Ask AI
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main id="portfolio-context">
+        <!-- Hero Section -->
+        <section class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden min-h-screen flex items-center">
+            <!-- Background Glow -->
+            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-emerald-600/20 rounded-full blur-[120px] opacity-50 pointer-events-none"></div>
+            
+            <div class="max-w-6xl mx-auto px-6 lg:px-8 relative z-10 w-full">
+                <div class="max-w-3xl">
+                    <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-slate-800/50 border border-slate-700 text-emerald-400 text-xs font-bold tracking-widest uppercase mb-6">
+                        <span class="relative flex h-2 w-2">
+                          <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                          <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+                        </span>
+                        Available for Growth/ABM/Performance Marketing Roles
+                    </div>
+                    <h1 class="text-5xl md:text-7xl font-extrabold text-white tracking-tight leading-[1.1] mb-6">
+                        Strategic Marketing Leader <br>
+                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-teal-500">
+                            & GTM Systems Architect
+                        </span>
+                    </h1>
+                    <p class="text-lg md:text-xl text-slate-400 mb-10 max-w-2xl leading-relaxed">
+                        I bridge the gap between Technical Data Science and Enterprise Demand Generation. I don't just manage performance budgets; I architect the underlying systems and AI workflows required to accelerate closed-won deals.
+                    </p>
+                    <div class="flex flex-wrap items-center gap-4">
+                        <a href="#frameworks" class="px-8 py-4 bg-emerald-600 hover:bg-emerald-500 text-white font-bold rounded-lg transition-all shadow-[0_0_20px_rgba(16,185,129,0.3)] hover:shadow-[0_0_30px_rgba(16,185,129,0.5)]">
+                            Explore My Frameworks
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Philosophy & Core Competencies -->
+        <section id="about" class="py-24 bg-slate-900/50 border-y border-slate-800/50 relative">
+            <div class="max-w-6xl mx-auto px-6 lg:px-8">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                    <div>
+                        <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">Marketing is a <span class="text-emerald-400">Financial Engine.</span></h2>
+                        <p class="text-slate-400 leading-relaxed mb-6">
+                            With over 7 years of experience, my approach is rooted in econometrics. Scaling pipeline isn't about spending more money; it's about understanding <strong>non-linear saturation logic</strong>. I build the technical infrastructure to map every marketing dollar to tangible pipeline impact.
+                        </p>
+                        <ul class="space-y-4">
+                            <li class="flex items-start gap-3">
+                                <i data-lucide="check-circle-2" class="w-6 h-6 text-emerald-500 shrink-0 mt-0.5"></i>
+                                <div>
+                                    <strong class="text-white block">Performance Marketing & Scale</strong>
+                                    <span class="text-sm text-slate-500">Orchestrating multi-channel strategies across SEM, Social, and Programmatic to reduce CPL.</span>
+                                </div>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i data-lucide="check-circle-2" class="w-6 h-6 text-emerald-500 shrink-0 mt-0.5"></i>
+                                <div>
+                                    <strong class="text-white block">Strategic ABM & Velocity</strong>
+                                    <span class="text-sm text-slate-500">Engineering "Technical Validity" decision trees to neutralize gatekeepers and accelerate deals.</span>
+                                </div>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i data-lucide="check-circle-2" class="w-6 h-6 text-emerald-500 shrink-0 mt-0.5"></i>
+                                <div>
+                                    <strong class="text-white block">AI Operations & Data Analytics</strong>
+                                    <span class="text-sm text-slate-500">Building "Insight → Messaging" engines and maintaining server-side tracking (GTM/GA4).</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Tech Stack Visual -->
+                    <div class="glass-panel p-8 rounded-2xl relative animate-float">
+                        <div class="absolute -top-4 -right-4 w-24 h-24 bg-emerald-500/20 rounded-full blur-2xl"></div>
+                        <h3 class="text-lg font-bold text-white mb-6 flex items-center gap-2">
+                            <i data-lucide="cpu" class="w-5 h-5 text-emerald-400"></i> Technical Architecture
+                        </h3>
+                        <div class="flex flex-wrap gap-3">
+                            <span class="px-4 py-2 bg-slate-800/80 text-slate-300 rounded-lg border border-slate-700 text-sm font-medium flex items-center gap-2"><i data-lucide="search" class="w-4 h-4 text-blue-400"></i> Google Ads</span>
+                            
+                            <span class="px-4 py-2 bg-slate-800/80 text-slate-300 rounded-lg border border-slate-700 text-sm font-medium flex items-center gap-2">
+                                <svg class="w-4 h-4 text-[#0A66C2]" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                    <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                                </svg>
+                                LinkedIn Campaign Manager
+                            </span>
+
+                            <span class="px-4 py-2 bg-slate-800/80 text-slate-300 rounded-lg border border-slate-700 text-sm font-medium flex items-center gap-2"><i data-lucide="infinity" class="w-4 h-4 text-blue-600"></i> Meta Ads</span>
+                            <span class="px-4 py-2 bg-slate-800/80 text-slate-300 rounded-lg border border-slate-700 text-sm font-medium flex items-center gap-2"><i data-lucide="target" class="w-4 h-4 text-red-400"></i> 6sense</span>
+                            <span class="px-4 py-2 bg-slate-800/80 text-slate-300 rounded-lg border border-slate-700 text-sm font-medium flex items-center gap-2"><i data-lucide="bar-chart-2" class="w-4 h-4 text-yellow-400"></i> GA4 & GTM</span>
+                            <span class="px-4 py-2 bg-slate-800/80 text-slate-300 rounded-lg border border-slate-700 text-sm font-medium flex items-center gap-2"><i data-lucide="database" class="w-4 h-4 text-purple-400"></i> SQL</span>
+                            <span class="px-4 py-2 bg-slate-800/80 text-slate-300 rounded-lg border border-slate-700 text-sm font-medium flex items-center gap-2"><i data-lucide="pie-chart" class="w-4 h-4 text-orange-400"></i> Tableau / Looker</span>
+                            <span class="px-4 py-2 bg-slate-800/80 text-slate-300 rounded-lg border border-slate-700 text-sm font-medium flex items-center gap-2"><i data-lucide="bot" class="w-4 h-4 text-emerald-400"></i> Clay / Jasper AI</span>
+                            <span class="px-4 py-2 bg-slate-800/80 text-slate-300 rounded-lg border border-slate-700 text-sm font-medium flex items-center gap-2"><i data-lucide="share-2" class="w-4 h-4 text-orange-500"></i> HubSpot</span>
+                            <span class="px-4 py-2 bg-slate-800/80 text-slate-300 rounded-lg border border-slate-700 text-sm font-medium flex items-center gap-2"><i data-lucide="cloud" class="w-4 h-4 text-cyan-400"></i> Salesforce</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Frameworks & Projects Showcase -->
+        <section id="frameworks" class="py-24">
+            <div class="max-w-6xl mx-auto px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Interactive GTM Frameworks</h2>
+                    <p class="text-slate-400 max-w-2xl mx-auto">Live, interactive dashboards and simulators demonstrating my strategic approach to capital allocation, ABM, and pipeline velocity.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    
+                    <!-- Project 1 -->
+                    <div class="glass-panel p-1 rounded-2xl group hover:-translate-y-1 transition-all duration-300">
+                        <div class="bg-slate-900 rounded-xl p-8 h-full flex flex-col justify-between">
+                            <div>
+                                <div class="w-12 h-12 bg-emerald-500/10 rounded-lg flex items-center justify-center mb-6 border border-emerald-500/20 text-emerald-400">
+                                    <i data-lucide="line-chart" class="w-6 h-6"></i>
+                                </div>
+                                <h3 class="text-xl font-bold text-white mb-3">MMM Pipeline & Funnel Optimizer</h3>
+                                <p class="text-slate-400 text-sm leading-relaxed mb-6">
+                                    An econometric simulation modeling channel saturation and marginal ROAS. Uses a greedy algorithm to optimize capital allocation across Search, Social, and ABM Display.
+                                </p>
+                            </div>
+                            <a href="https://cartman-brah.github.io/MMM-Pipeline-Funnel-Optimizer/" target="_blank" class="inline-flex items-center gap-2 text-emerald-400 font-semibold text-sm hover:text-emerald-300 transition-colors mt-auto">
+                                View Interactive Model <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Project 2 -->
+                    <div class="glass-panel p-1 rounded-2xl group hover:-translate-y-1 transition-all duration-300">
+                        <div class="bg-slate-900 rounded-xl p-8 h-full flex flex-col justify-between">
+                            <div>
+                                <div class="w-12 h-12 bg-blue-500/10 rounded-lg flex items-center justify-center mb-6 border border-blue-500/20 text-blue-400">
+                                    <i data-lucide="zap" class="w-6 h-6"></i>
+                                </div>
+                                <h3 class="text-xl font-bold text-white mb-3">Pipeline Velocity Simulator</h3>
+                                <p class="text-slate-400 text-sm leading-relaxed mb-6">
+                                    An executive-level modeling tool quantifying Revenue Delta. Proves mathematically how technical alignment directly drives a 31% increase in win rates.
+                                </p>
+                            </div>
+                            <a href="https://cartman-brah.github.io/GTM-pipeline-velocity-simulator/" target="_blank" class="inline-flex items-center gap-2 text-blue-400 font-semibold text-sm hover:text-blue-300 transition-colors mt-auto">
+                                View Interactive Model <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Project 3 -->
+                    <div class="glass-panel p-1 rounded-2xl group hover:-translate-y-1 transition-all duration-300">
+                        <div class="bg-slate-900 rounded-xl p-8 h-full flex flex-col justify-between">
+                            <div>
+                                <div class="w-12 h-12 bg-purple-500/10 rounded-lg flex items-center justify-center mb-6 border border-purple-500/20 text-purple-400">
+                                    <i data-lucide="git-merge" class="w-6 h-6"></i>
+                                </div>
+                                <h3 class="text-xl font-bold text-white mb-3">ABM Decision Tree</h3>
+                                <p class="text-slate-400 text-sm leading-relaxed mb-6">
+                                    A strategic "Technical Validity" framework designed to neutralize technical gatekeepers and systematically reduce "Time-to-Consensus" by 20%.
+                                </p>
+                            </div>
+                            <a href="https://cartman-brah.github.io/ABM-Decision-Tree-Workflow/" target="_blank" class="inline-flex items-center gap-2 text-purple-400 font-semibold text-sm hover:text-purple-300 transition-colors mt-auto">
+                                View Workflow <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Project 4 -->
+                    <div class="glass-panel p-1 rounded-2xl group hover:-translate-y-1 transition-all duration-300">
+                        <div class="bg-slate-900 rounded-xl p-8 h-full flex flex-col justify-between">
+                            <div>
+                                <div class="w-12 h-12 bg-orange-500/10 rounded-lg flex items-center justify-center mb-6 border border-orange-500/20 text-orange-400">
+                                    <i data-lucide="cpu" class="w-6 h-6"></i>
+                                </div>
+                                <h3 class="text-xl font-bold text-white mb-3">AI-Ops Messaging Engine</h3>
+                                <p class="text-slate-400 text-sm leading-relaxed mb-6">
+                                    A scalable infrastructure blueprint using Clay and Jasper to automate deep account research, allowing for hyper-personalized messaging at global scale.
+                                </p>
+                            </div>
+                            <a href="https://cartman-brah.github.io/ai-tools-ops-workflow/" target="_blank" class="inline-flex items-center gap-2 text-orange-400 font-semibold text-sm hover:text-orange-300 transition-colors mt-auto">
+                                View AI Infrastructure <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Timeline -->
+        <section id="experience" class="py-24 bg-slate-900/50 border-t border-slate-800/50">
+            <div class="max-w-4xl mx-auto px-6 lg:px-8">
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-16 text-center">Professional Timeline</h2>
+                
+                <div class="space-y-12 relative before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-transparent before:via-slate-700 before:to-transparent">
+                    
+                    <!-- Job 1 -->
+                    <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active">
+                        <div class="flex items-center justify-center w-10 h-10 rounded-full border-4 border-slate-900 bg-emerald-500 text-slate-900 shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10">
+                            <i data-lucide="briefcase" class="w-4 h-4"></i>
+                        </div>
+                        <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] glass-panel p-6 rounded-2xl">
+                            <div class="flex items-center justify-between mb-2">
+                                <h4 class="font-bold text-white text-lg">Global Perf Marketing Manager</h4>
+                                <span class="text-xs font-bold text-emerald-400">03/2025 – 08/2025</span>
+                            </div>
+                            <h5 class="text-sm font-medium text-slate-400 mb-4">Remote / Helsinki, Finland</h5>
+                            <p class="text-sm text-slate-400 leading-relaxed mb-3">Architected multi-channel demand generation plans across paid search, social, and programmatic platforms. Managed international campaigns on Google, Meta, and LinkedIn, optimizing for awareness-to-pipeline conversion.</p>
+                            <p class="text-sm text-slate-400 leading-relaxed">Allocated budgets using data-driven segmentation and non-linear saturation logic to maximize blended ROAS across EMEA. Led continuous testing initiatives and presented strategic recommendations to senior stakeholders.</p>
+                        </div>
+                    </div>
+
+                    <!-- Job 2 -->
+                    <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group">
+                        <div class="flex items-center justify-center w-10 h-10 rounded-full border-4 border-slate-900 bg-slate-700 text-slate-300 shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10">
+                            <i data-lucide="building-2" class="w-4 h-4"></i>
+                        </div>
+                        <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] glass-panel p-6 rounded-2xl">
+                            <div class="flex items-center justify-between mb-2">
+                                <h4 class="font-bold text-white text-lg">Marketing Manager – Paid Search</h4>
+                                <span class="text-xs font-bold text-emerald-400">07/2024 – 12/2024</span>
+                            </div>
+                            <h5 class="text-sm font-medium text-slate-400 mb-4">Rippling | San Francisco, CA</h5>
+                            <p class="text-sm text-slate-400 leading-relaxed mb-3">Developed comprehensive paid search demand generation strategies across Google Ads and Microsoft Ads, targeting enterprise buyers to support robust sales pipeline development objectives.</p>
+                            <p class="text-sm text-slate-400 leading-relaxed">Optimized full-funnel campaigns through aggressive A/B testing and performance metric analysis, actively reducing blended CPO. Partnered cross-functionally on landing page optimization and forecasted spending to achieve aggressive ROAS targets.</p>
+                        </div>
+                    </div>
+
+                    <!-- Job 3 -->
+                    <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group">
+                        <div class="flex items-center justify-center w-10 h-10 rounded-full border-4 border-slate-900 bg-slate-700 text-slate-300 shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10">
+                            <i data-lucide="bar-chart" class="w-4 h-4"></i>
+                        </div>
+                        <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] glass-panel p-6 rounded-2xl">
+                            <div class="flex items-center justify-between mb-2">
+                                <h4 class="font-bold text-white text-lg">Head of Perf Marketing & Analytics</h4>
+                                <span class="text-xs font-bold text-emerald-400">02/2022 – 07/2024</span>
+                            </div>
+                            <h5 class="text-sm font-medium text-slate-400 mb-4">Reaktor | Helsinki, Finland</h5>
+                            <p class="text-sm text-slate-400 leading-relaxed mb-3">Led integrated multi-channel campaigns driving qualified lead generation for enterprise client portfolios. Implemented a global ABM strategy targeting high-value accounts, achieving 67% higher account engagement and a 45% improvement in lead quality.</p>
+                            <p class="text-sm text-slate-400 leading-relaxed">Orchestrated marketing strategy aligned with sales objectives, managing $500K+ annual budgets. Migrated to GTM Server-side tracking to enhance first-party data control, attribution accuracy, and GDPR/CCPA compliance.</p>
+                        </div>
+                    </div>
+
+                    <!-- Job 4 -->
+                    <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group">
+                        <div class="flex items-center justify-center w-10 h-10 rounded-full border-4 border-slate-900 bg-slate-700 text-slate-300 shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10">
+                            <i data-lucide="shield" class="w-4 h-4"></i>
+                        </div>
+                        <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] glass-panel p-6 rounded-2xl">
+                            <div class="flex items-center justify-between mb-2">
+                                <h4 class="font-bold text-white text-lg">Marketing Manager</h4>
+                                <span class="text-xs font-bold text-emerald-400">08/2019 – 02/2022</span>
+                            </div>
+                            <h5 class="text-sm font-medium text-slate-400 mb-4">F-Secure | Helsinki, Finland</h5>
+                            <p class="text-sm text-slate-400 leading-relaxed mb-3">Scaled international demand generation via SEM, SEO, and paid social. Developed integrated strategies aligned with $2M+ sales targets, increasing monthly pipeline by 45% and reducing CPL by 18%.</p>
+                            <p class="text-sm text-slate-400 leading-relaxed">Established feedback loops with sales teams to optimize lead quality and accelerate enterprise deal progression. Utilized advanced web analytics to evaluate customer experience across touchpoints.</p>
+                        </div>
+                    </div>
+
+                    <!-- Job 5 -->
+                    <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group">
+                        <div class="flex items-center justify-center w-10 h-10 rounded-full border-4 border-slate-900 bg-slate-700 text-slate-300 shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10">
+                            <i data-lucide="globe" class="w-4 h-4"></i>
+                        </div>
+                        <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] glass-panel p-6 rounded-2xl">
+                            <div class="flex items-center justify-between mb-2">
+                                <h4 class="font-bold text-white text-lg">Online Marketing Manager</h4>
+                                <span class="text-xs font-bold text-emerald-400">11/2016 – 04/2019</span>
+                            </div>
+                            <h5 class="text-sm font-medium text-slate-400 mb-4">Webleaf Ltd | United Kingdom</h5>
+                            <p class="text-sm text-slate-400 leading-relaxed mb-3">Managed international SEM and paid marketing campaigns for a diverse B2B client portfolio. Optimized for conversion and ROAS, delivering strong results with a 28% year-over-year client ROI improvement.</p>
+                            <p class="text-sm text-slate-400 leading-relaxed">Developed comprehensive demand generation strategies tailored to geographical markets. Collaborated closely with client sales teams to effectively support pipeline initiatives and maintain lead quality standards.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-950 py-10 border-t border-slate-900">
+        <div class="max-w-6xl mx-auto px-6 lg:px-8 text-center flex flex-col items-center">
+            <div class="w-10 h-10 rounded bg-slate-900 flex items-center justify-center text-emerald-500 mb-4">
+                <i data-lucide="layers" class="w-5 h-5"></i>
+            </div>
+            <p class="text-slate-500 text-sm mb-6">Let's connect!</p>
+            <div class="flex items-center gap-6">
+                <a href="https://www.linkedin.com/in/devrautela/" target="_blank" aria-label="LinkedIn Profile" class="p-2.5 rounded-full bg-slate-900 text-slate-400 hover:text-emerald-400 hover:bg-slate-800 transition-all transform hover:-translate-y-1">
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                    </svg>
+                </a>
+                <a href="mailto:dev.rautela16@gmail.com" aria-label="Email Dev" class="p-2.5 rounded-full bg-slate-900 text-slate-400 hover:text-emerald-400 hover:bg-slate-800 transition-all transform hover:-translate-y-1">
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M1.5 8.67v8.58a3 3 0 003 3h15a3 3 0 003-3V8.67l-8.928 5.493a3 3 0 01-3.144 0L1.5 8.67z" />
+                        <path d="M22.5 6.908V6.75a3 3 0 00-3-3h-15a3 3 0 00-3 3v.158l9.714 5.978a1.5 1.5 0 001.572 0L22.5 6.908z" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Gemini AI Copilot Widget -->
+    <div id="ai-widget-container" class="fixed bottom-6 right-6 z-50 flex flex-col items-end">
+        <!-- Chat Window -->
+        <div id="ai-chat-window" class="hidden w-80 sm:w-96 glass-panel rounded-2xl shadow-2xl mb-4 overflow-hidden flex flex-col transition-all duration-300 transform origin-bottom-right border border-emerald-500/20">
+            <div class="bg-slate-900/90 p-4 border-b border-slate-800 flex justify-between items-center backdrop-blur-md">
+                <div class="flex items-center gap-2">
+                    <div class="relative">
+                        <i data-lucide="bot" class="w-5 h-5 text-emerald-400"></i>
+                        <span class="absolute -top-1 -right-1 w-2 h-2 bg-emerald-400 rounded-full animate-ping"></span>
+                    </div>
+                    <span class="font-bold text-white text-sm">Dev's AI Copilot</span>
+                </div>
+                <button onclick="toggleChat()" class="text-slate-400 hover:text-white transition-colors">
+                    <i data-lucide="x" class="w-5 h-5"></i>
+                </button>
+            </div>
+            
+            <div id="chat-messages" class="h-80 p-4 overflow-y-auto bg-slate-900/50 flex flex-col gap-3 text-sm scroll-smooth">
+                <div class="bg-slate-800 text-slate-200 p-3 rounded-xl rounded-tl-none self-start max-w-[85%] border border-slate-700 shadow-sm">
+                    Hi! I'm an AI trained on Dev's portfolio. Ask me about his performance marketing background, his growth marketing approach, his ABM experience at Reaktor, or his tech stack!
+                </div>
+            </div>
+            
+            <div class="p-3 bg-slate-900/90 border-t border-slate-800 flex gap-2 backdrop-blur-md">
+                <input type="text" id="chat-input" placeholder="e.g., How does he optimize pipelines?" class="flex-grow text-sm bg-slate-800 text-white placeholder-slate-400 border border-slate-700 rounded-lg px-3 py-2 focus:outline-none focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500 transition-all" onkeypress="handleKeyPress(event)">
+                <button onclick="sendMessage()" class="bg-emerald-600 hover:bg-emerald-500 text-white p-2 rounded-lg transition-colors flex items-center justify-center min-w-[40px] shadow-lg shadow-emerald-900/20">
+                    <i data-lucide="send" class="w-4 h-4"></i>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Toggle Button -->
+        <button onclick="toggleChat()" id="ai-toggle-btn" class="bg-slate-800 hover:bg-slate-700 text-white rounded-full px-5 py-3.5 shadow-2xl transition-all duration-300 hover:scale-105 flex items-center gap-2 border border-emerald-500/30 group">
+            <i data-lucide="sparkles" class="w-4 h-4 text-emerald-400 group-hover:animate-pulse"></i>
+            <span class="font-bold text-sm tracking-wide">Ask AI</span>
+        </button>
+    </div>
+
+    <script>
+        lucide.createIcons();
+
+        // Navbar blur effect on scroll
+        window.addEventListener('scroll', () => {
+            const nav = document.getElementById('navbar');
+            if (window.scrollY > 20) {
+                nav.classList.add('shadow-lg', 'bg-slate-900/90');
+            } else {
+                nav.classList.remove('shadow-lg', 'bg-slate-900/90');
+            }
+        });
+
+        // --- Gemini AI Integration ---
+        const apiKey = ""; // API key will be automatically injected at runtime
+
+        function toggleChat() {
+            const chatWindow = document.getElementById('ai-chat-window');
+            chatWindow.classList.toggle('hidden');
+            if(!chatWindow.classList.contains('hidden')){
+                document.getElementById('chat-input').focus();
+            }
+        }
+
+        function appendMessage(role, text) {
+            const messagesContainer = document.getElementById('chat-messages');
+            const msgDiv = document.createElement('div');
+            
+            // Basic markdown parsing for bold text
+            const formattedText = text.replace(/\*\*(.*?)\*\*/g, '<strong class="text-emerald-400">$1</strong>');
+            
+            if (role === 'user') {
+                msgDiv.className = `bg-emerald-600 text-white p-3 rounded-xl rounded-tr-none self-end max-w-[85%] shadow-md text-sm leading-relaxed`;
+            } else {
+                msgDiv.className = `bg-slate-800 text-slate-200 p-3 rounded-xl rounded-tl-none self-start max-w-[85%] border border-slate-700 shadow-md text-sm leading-relaxed`;
+            }
+            
+            msgDiv.innerHTML = formattedText;
+            messagesContainer.appendChild(msgDiv);
+            messagesContainer.scrollTop = messagesContainer.scrollHeight;
+        }
+
+        function showLoading() {
+            const messagesContainer = document.getElementById('chat-messages');
+            const loadingDiv = document.createElement('div');
+            loadingDiv.id = 'chat-loading';
+            loadingDiv.className = 'bg-slate-800 p-3 rounded-xl rounded-tl-none self-start border border-slate-700 flex gap-1.5 items-center h-10 shadow-md';
+            loadingDiv.innerHTML = '<div class="w-1.5 h-1.5 bg-emerald-400 rounded-full animate-bounce"></div><div class="w-1.5 h-1.5 bg-emerald-400 rounded-full animate-bounce" style="animation-delay: 0.2s"></div><div class="w-1.5 h-1.5 bg-emerald-400 rounded-full animate-bounce" style="animation-delay: 0.4s"></div>';
+            messagesContainer.appendChild(loadingDiv);
+            messagesContainer.scrollTop = messagesContainer.scrollHeight;
+        }
+
+        function removeLoading() {
+            const loadingDiv = document.getElementById('chat-loading');
+            if (loadingDiv) loadingDiv.remove();
+        }
+
+        function handleKeyPress(e) {
+            if (e.key === 'Enter') sendMessage();
+        }
+
+        async function fetchWithRetry(url, options, retries = 5, delay = 1000) {
+            for (let i = 0; i < retries; i++) {
+                try {
+                    const response = await fetch(url, options);
+                    if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+                    return await response.json();
+                } catch (e) {
+                    if (i === retries - 1) throw e;
+                    await new Promise(res => setTimeout(res, delay));
+                    delay *= 2;
+                }
+            }
+        }
+
+        async function sendMessage() {
+            const inputField = document.getElementById('chat-input');
+            const message = inputField.value.trim();
+            if (!message) return;
+
+            inputField.value = '';
+            appendMessage('user', message);
+            showLoading();
+
+            try {
+                // Dynamically pull current Portfolio context so the AI knows what the user is looking at
+                const portfolioContext = document.getElementById('portfolio-context').innerText;
+                const systemPrompt = `You are "Dev's AI Copilot", an AI assistant representing Dev Rautela. 
+                Dev is a Strategic Marketing Leader and GTM Systems Architect based in Helsinki, Finland.
+                Use the following context from his online portfolio to answer recruiter/hiring manager questions accurately, professionally, and persuasively.
+                Emphasize his "Marketing as a Financial Engine" philosophy, econometric modeling skills (MMM), and ABM expertise.
+                Keep answers conversational, concise (1-3 brief paragraphs maximum), and directly address the user's question. 
+                If asked something outside Dev's professional scope, politely pivot back to his marketing expertise.
+                
+                Portfolio Context:\n${portfolioContext}`;
+                
+                const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-09-2025:generateContent?key=${apiKey}`;
+                const payload = {
+                    contents: [{ parts: [{ text: message }] }],
+                    systemInstruction: { parts: [{ text: systemPrompt }] }
+                };
+
+                const result = await fetchWithRetry(url, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload)
+                });
+
+                removeLoading();
+                const reply = result.candidates?.[0]?.content?.parts?.[0]?.text || "Sorry, I couldn't generate a response right now.";
+                appendMessage('assistant', reply);
+            } catch (error) {
+                removeLoading();
+                appendMessage('assistant', "Apologies, I encountered an error connecting to the AI backend. Please reach out to Dev directly via LinkedIn or email.");
+                console.error("Gemini API Error:", error);
+            }
+        }
+    </script>
+</body>
+</html>
