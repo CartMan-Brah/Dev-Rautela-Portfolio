@@ -41,4 +41,4 @@ Education: MBA from the University of Tampere with IBM Professional Certificatio
 
 📫 Let's Connect –
 
-LinkedIn: in/devrautela
+LinkedIn: https://linkedin.com/in/devrautela/ 
